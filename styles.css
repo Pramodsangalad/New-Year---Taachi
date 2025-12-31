@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 50%, #fce4ec 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Floating elements animation */
+.floating {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+.floating:nth-child(1) { 
+    top: 10%; 
+    left: 5%; 
+    animation-delay: 0s; 
+    font-size: 2rem; 
+    color: #ff69b4; 
+}
+.floating:nth-child(2) { 
+    top: 20%; 
+    right: 10%; 
+    animation-delay: 1s; 
+    font-size: 1.5rem; 
+    color: #9370db; 
+}
+.floating:nth-child(3) { 
+    bottom: 30%; 
+    left: 15%; 
+    animation-delay: 2s; 
+    font-size: 1.8rem; 
+    color: #ffd700; 
+}
+.floating:nth-child(4) { 
+    bottom: 15%; 
+    right: 20%; 
+    animation-delay: 3s; 
+    font-size: 1.3rem; 
+    color: #87ceeb; 
+}
+.floating:nth-child(5) { 
+    top: 40%; 
+    left: 30%; 
+    animation-delay: 4s; 
+    font-size: 1.6rem; 
+    color: #ff69b4; 
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Landing Screen */
+.landing-screen {
+    transition: opacity 0.5s ease;
+}
+
+.landing-text {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #5a5a5a;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.btn-yes {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+}
+
+.btn-no {
+    background: linear-gradient(45deg, #a8e6cf, #dcedc1);
+    color: #5a5a5a;
+}
+
+/* No Response Screen */
+.no-response {
+    display: none;
+}
+
+.no-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+    animation: dramatic 0.5s ease infinite alternate;
+}
+
+@keyframes dramatic {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.cat-image {
+    max-width: 300px;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.btn-back {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+/* Surprise Section */
+.surprise-section {
+    display: none;
+    width: 100%;
+    max-width: 800px;
+}
+
+.hehe-animation {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+.click-below {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #5a5a5a;
+}
+
+.next-btn {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+    color: #5a5a5a;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+/* Main Surprise Content */
+.main-content {
+    display: none;
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    color: #667eea;
+    margin-bottom: 1rem;
+    animation: fadeInScale 1s ease forwards;
+    opacity: 0;
+}
+
+.name-highlight {
+    font-size: 4rem;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin: 1rem 0;
+    display: block;
+    animation: fadeInScale 1s ease 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Quotes Section */
+.quotes-section {
+    margin: 3rem 0;
+}
+
+.quote-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.quote-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+}
+
+/* Memories Section */
+.memories-section {
+    margin: 3rem 0;
+}
+
+.memories-title {
+    font-size: 1.8rem;
+    color: #667eea;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    height: 200px;
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Final Message */
+.final-message {
+    font-size: 1.5rem;
+    color: #5a5a5a;
+    margin: 3rem 0;
+    line-height: 1.8;
+    animation: fadeIn 2s ease 1.5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Replay Button */
+.replay-btn {
+    background: linear-gradient(45deg, #a8e6cf, #dcedc1);
+    color: #5a5a5a;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-text {
+        font-size: 2rem;
+    }
+    
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    
+    .name-highlight {
+        font-size: 3rem;
+    }
+    
+    .quote {
+        font-size: 1rem;
+    }
+    
+    .final-message {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-text {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    .main-heading {
+        font-size: 2rem;
+    }
+    
+    .name-highlight {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026 - For Saachi 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating elements -->
+    <div class="floating">🌸</div>
+    <div class="floating">💖</div>
+    <div class="floating">✨</div>
+    <div class="floating">🌺</div>
+    <div class="floating">💫</div>
+
+    <div class="container">
+        <!-- Landing Screen -->
+        <div class="landing-screen" id="landingScreen">
+            <h1 class="landing-text">"Hey! I made something for you... will you see it?"</h1>
+            <button class="btn btn-yes" id="yesBtn">Yes</button>
+            <button class="btn btn-no" id="noBtn">No</button>
+        </div>
+
+        <!-- No Response Screen -->
+        <div class="no-response" id="noResponse">
+            <h1 class="no-text">"How dare you 😾"</h1>
+            <img src="https://placekitten.com/300/300" alt="Cat with toy gun" class="cat-image">
+            <button class="btn btn-back" id="backBtn">Go Back</button>
+        </div>
+
+        <!-- Surprise Section -->
+        <div class="surprise-section" id="surpriseSection">
+            <div class="hehe-animation">Hehe! 😄</div>
+            <div class="click-below">Click below for the surprise!</div>
+            <button class="btn next-btn" id="nextBtn">Next →</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="mainContent">
+            <h1 class="main-heading">Happy New Year 2026, my bestiee 💖</h1>
+            <h2 class="name-highlight">Saachi</h2>
+
+            <!-- Quotes Section -->
+            <div class="quotes-section">
+                <div class="quote-card" id="quote1">
+                    <p class="quote">"Here's to another year of late-night talks, spontaneous plans, and standing by each other."</p>
+                </div>
+                <div class="quote-card" id="quote2">
+                    <p class="quote">"I'm so grateful for our friendship, and I hope the year ahead brings even more opportunities for it to grow, strengthen, and blossom in beautiful ways."</p>
+                </div>
+                <div class="quote-card" id="quote3">
+                    <p class="quote">"Let's make 2026 a year of endless possibilities and joy. To more questionable decisions next year! Let's go!"</p>
+                </div>
+            </div>
+
+            <!-- Memories Section -->
+            <div class="memories-section">
+                <h2 class="memories-title">Every picture, a memory. Every memory, a smile.</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="images/Img01.jpeg" alt="Memory 1" onerror="this.style.display='none'; this.parentElement.innerHTML='Memory 1';">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/img02.jpeg" alt="Memory 2" onerror="this.style.display='none'; this.parentElement.innerHTML='Memory 2';">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/img03.jpeg" alt="Memory 3" onerror="this.style.display='none'; this.parentElement.innerHTML='Memory 3';">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/img04.jpeg" alt="Memory 4" onerror="this.style.display='none'; this.parentElement.innerHTML='Memory 4';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" id="finalMessage">
+                No matter where life takes us, you'll always be my person.
+                Cheers to us, to growth, laughter, chaos, and love in 2026 💫
+            </div>
+
+            <button class="btn replay-btn" id="replayBtn">Replay Surprise</button>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="music/background-music.mp3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Audio Controls -->
+    <div id="audioControls" style="position: fixed; bottom: 20px; right: 20px; display: none;">
+        <button id="playPauseBtn" style="padding: 10px; border-radius: 50%; background: white; border: 2px solid #ff6b6b; cursor: pointer;">
+            ▶️
+        </button>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.1" style="width: 100px; margin-left: 10px;">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
